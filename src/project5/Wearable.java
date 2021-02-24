@@ -1,39 +1,56 @@
-
 package project5;
 
 public class Wearable {
-    private int rankingPosition;
-    private Double pricePosition;
-    private String coNamePosition; 
 
-    public Wearable(int rankingPosition, Double pricePosition, String coNamePosition) {
-        this.rankingPosition = rankingPosition;
-        this.pricePosition = pricePosition;
-        this.coNamePosition = coNamePosition;
+    private int ranking;
+    private String name;
+    private Double price;
+    private String bodyLocation;
+    private String category;
+    private Company company;
+
+    public Wearable(int ranking, String name, Double price, String bodyLocation, String category, Company company) {
+        this.ranking = ranking;
+        this.name = name;
+        this.price = price;
+        this.bodyLocation = bodyLocation;
+        this.category = category;
+        this.company = company;
     }
 
-    public int getRankingPosition() {
-        return rankingPosition;
+    public int getRanking() {
+        return ranking;
     }
 
-    public void setRankingPosition(int rankingPosition) {
-        this.rankingPosition = rankingPosition;
+    public String getName() {
+        return name;
     }
 
-    public Double getPricePosition() {
-        return pricePosition;
+    public Double getPrice() {
+        return price;
     }
 
-    public void setPricePosition(Double pricePosition) {
-        this.pricePosition = pricePosition;
+    public String getBodyLocation() {
+        return bodyLocation;
     }
 
-    public String getCoNamePosition() {
-        return coNamePosition;
+    public String getCategory() {
+        return category;
     }
 
-    public void setCoNamePosition(String coNamePosition) {
-        this.coNamePosition = coNamePosition;
+    public Company getCompany() {
+        return company;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Wearable{" + "ranking=" + ranking + ", name=" + name + ", price=" + price + ", bodyLocation=" + bodyLocation + ", category=" + category + ", company=" + company + '}';
+    }
+
+    public Wearable(int ranking, Double price, String name) {
+        this.ranking = ranking;
+        this.name = name;
+        this.price = price;
+    }
+
 }
